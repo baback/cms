@@ -1,9 +1,7 @@
-# Reporting Security Vulnerabilities
+# Security Policy
 
-Potential security vulnerabilities can be reported directly us at `security@ghost.org`. The Ghost Security Team communicates privately and works in a secured, isolated repository for tracking, testing, and resolving security-related issues.
+## Reporting Security Vulnerabilities
 
-The full, up-to-date details of our security policy and procedure can always be found in our documentation:
+If you discover a security vulnerability, please report it responsibly by contacting the development team directly.
 
-https://ghost.org/docs/security/
-
-Please refer to this before emailing us. Thanks for helping make Ghost safe for everyone 🙏.
+Do not create public GitHub issues for security vulnerabilities.

@@ -2,7 +2,7 @@ import React from 'react';
 import type {NiceModalHocProps} from '@ebay/nice-modal-react';
 import type {RoutingModalProps} from '@tryghost/admin-x-framework/routing';
 
-import AboutModal from '../../settings/general/about';
+// AboutModal removed - Ghost-specific branding
 import AddIntegrationModal from '../../settings/advanced/integrations/add-integration-modal';
 import AddNewsletterModal from '../../settings/email/newsletters/add-newsletter-modal';
 // import AddOfferModal from '../../settings/growth/offers/AddOfferModal';
@@ -25,7 +25,7 @@ import PinturaModal from '../../settings/advanced/integrations/pintura-modal';
 import PortalModal from '../../settings/membership/portal/portal-modal';
 import SlackModal from '../../settings/advanced/integrations/slack-modal';
 import StripeConnectModal from '../../settings/membership/stripe/stripe-connect-modal';
-import TestimonialsModal from '../../settings/growth/explore/testimonials-modal';
+// TestimonialsModal removed - Ghost Explore specific
 import TierDetailModal from '../../settings/membership/tiers/tier-detail-modal';
 import UnsplashModal from '../../settings/advanced/integrations/unsplash-modal';
 import UserDetailModal from '../../settings/general/user-detail-modal';
@@ -47,7 +47,7 @@ const modals = {
     PortalModal,
     SlackModal,
     StripeConnectModal,
-    TestimonialsModal,
+    // TestimonialsModal removed
     TierDetailModal,
     UnsplashModal,
     UserDetailModal,
@@ -58,7 +58,7 @@ const modals = {
     // OffersModal,
     // AddOfferModal,
     // EditOfferModal,
-    AboutModal,
+    // AboutModal removed
     OfferSuccess
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } satisfies {[key: string]: ModalComponent<any>};

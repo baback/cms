@@ -6,7 +6,7 @@ import type {ModalName} from './routing/modals';
 export const modalPaths: {[key: string]: ModalName} = {
     'design/change-theme': 'DesignAndThemeModal',
     'design/edit': 'DesignAndThemeModal',
-    'theme/install': 'DesignAndThemeModal', // this is a special route, because it can install a theme directly from the Ghost Marketplace
+    // 'theme/install' removed - using headless CMS with custom frontend
     'navigation/edit': 'NavigationModal',
     'staff/invite': 'InviteUserModal',
     'staff/:slug/social-links': 'UserDetailModal',
@@ -34,9 +34,8 @@ export const modalPaths: {[key: string]: ModalName} = {
     'embed-signup-form/show': 'EmbedSignupFormModal',
     'offers/edit': 'OffersContainerModal',
     'offers/edit/:id': 'OffersContainerModal',
-    'offers/new': 'OffersContainerModal',
-    'explore/testimonial': 'TestimonialsModal',
-    about: 'AboutModal'
+    'offers/new': 'OffersContainerModal'
+    // 'explore/testimonial' and 'about' removed - Ghost-specific features
 };
 
 export const loadModals = () => import('./routing/modals');

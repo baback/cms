@@ -28,7 +28,8 @@ function AppSidebarHeader({ ...props }: React.ComponentProps<typeof SidebarHeade
     const { data: currentUser } = useCurrentUser();
     const site = useBrowseSite();
     const title = site.data?.site.title ?? "";
-    const siteIcon = site.data?.site.icon ?? "https://static.ghost.org/v4.0.0/images/ghost-orb-1.png";
+    // Use site icon if uploaded, otherwise show nothing (no Ghost branding)
+    const siteIcon = site.data?.site.icon ?? null;
     const showSearch = currentUser && !isContributorUser(currentUser);
 
     return (
@@ -36,13 +37,15 @@ function AppSidebarHeader({ ...props }: React.ComponentProps<typeof SidebarHeade
             <div className="flex flex-col items-stretch gap-6">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-md bg-transparent border-0 flex-shrink-0">
-                            <img
-                                src={siteIcon}
-                                alt="Site icon"
-                                className="w-full h-full rounded-md object-cover"
+                        {siteIcon && (
+                            <div className="w-8 h-8 rounded-md bg-transparent border-0 flex-shrink-0">
+                                <img
+                                    src={siteIcon}
+                                    alt="Site icon"
+                                    className="w-full h-full rounded-md object-cover"
                                 />
-                        </div>
+                            </div>
+                        )}
                         <div className="font-semibold text-[15px] text-foreground overflow-hidden text-ellipsis whitespace-nowrap">
                             {title}
                         </div>

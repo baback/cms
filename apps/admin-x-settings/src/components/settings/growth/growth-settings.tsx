@@ -1,5 +1,5 @@
 import EmbedSignupForm from './embed-signup/embed-signup-form';
-import Explore from './explore';
+// Explore (Ghost Explore) removed - Ghost-specific feature
 import Network from './network';
 import Offers from './offers';
 import React from 'react';
@@ -10,7 +10,7 @@ import {useGlobalData} from '../../providers/global-data-provider';
 
 export const searchKeywords = {
     network: ['growth', 'network', 'activitypub', 'blog', 'fediverse', 'sharing'],
-    explore: ['ghost explore', 'explore', 'growth', 'share', 'list', 'listing'],
+    // explore keywords removed
     recommendations: ['growth', 'recommendations', 'recommend', 'blogroll'],
     embedSignupForm: ['growth', 'embeddable signup form', 'embeddable form', 'embeddable sign up form', 'embeddable sign up'],
     offers: ['growth', 'offers', 'discounts', 'coupons', 'promotions']
@@ -23,7 +23,7 @@ const GrowthSettings: React.FC = () => {
     return (
         <SearchableSection keywords={Object.values(searchKeywords).flat()} title='Growth'>
             <Network keywords={searchKeywords.network} />
-            <Explore keywords={searchKeywords.explore} />
+            {/* Ghost Explore removed - Ghost-specific feature */}
             <Recommendations keywords={searchKeywords.recommendations} />
             <EmbedSignupForm keywords={searchKeywords.embedSignupForm} />
             {hasStripeEnabled && <Offers keywords={searchKeywords.offers} />}

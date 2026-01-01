@@ -1,4 +1,4 @@
-import GhostLogo from '../assets/images/orb-pink.png';
+// GhostLogo removed - using custom branding
 import React, {useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import useFeatureFlag from '../hooks/use-feature-flag';
@@ -180,7 +180,7 @@ const Sidebar: React.FC = () => {
                 {/* Site settings */}
                 <SettingNavSection isVisible={checkVisible(Object.values(siteSearchKeywords).flat())} title="Site">
                     <NavItem icon='palette' keywords={siteSearchKeywords.design} navid='design' title="Design & branding" onClick={handleSectionClick} />
-                    <NavItem icon='layout-2-col' keywords={siteSearchKeywords.theme} navid='theme' title="Theme" onClick={handleSectionClick} />
+                    {/* Theme nav item removed - using headless CMS with custom frontend */}
                     <NavItem icon='navigation' keywords={siteSearchKeywords.navigation} navid='navigation' title="Navigation" onClick={handleSectionClick} />
                     <NavItem icon='megaphone' keywords={siteSearchKeywords.announcementBar} navid='announcement-bar' title="Announcement bar" onClick={handleSectionClick} />
                 </SettingNavSection>
@@ -198,7 +198,7 @@ const Sidebar: React.FC = () => {
                 {/* Growth */}
                 <SettingNavSection isVisible={checkVisible(Object.values(growthSearchKeywords).flat())} title="Growth">
                     <NavItem icon='ap-network' keywords={growthSearchKeywords.network} navid='network' title="Network" onClick={handleSectionClick} />
-                    <NavItem icon='globe-simple' keywords={growthSearchKeywords.explore} navid='explore' title="Ghost Explore" onClick={handleSectionClick} />
+                    {/* Ghost Explore removed - Ghost-specific feature */}
                     <NavItem icon='heart' keywords={growthSearchKeywords.recommendations} navid='recommendations' title="Recommendations" onClick={handleSectionClick} />
                     <NavItem icon='emailfield' keywords={growthSearchKeywords.embedSignupForm} navid='embed-signup-form' title="Signup forms" onClick={handleSectionClick} />
                     {hasStripeEnabled && <NavItem icon='discount' keywords={growthSearchKeywords.offers} navid='offers' title="Offers" onClick={handleSectionClick} />}
@@ -212,14 +212,7 @@ const Sidebar: React.FC = () => {
                     <NavItem icon='time-back' keywords={advancedSearchKeywords.history} navid='history' title="History" onClick={handleSectionClick} />
                 </SettingNavSection>
 
-                {!filter &&
-                <a className='w-100 mb-10 mt-1 flex h-[38px] cursor-pointer items-center rounded-lg px-3 py-2 text-left text-[14px] font-medium text-grey-800 transition-all hover:bg-grey-200 focus:bg-grey-100 dark:text-grey-600 dark:hover:bg-grey-950 dark:focus:bg-grey-925' onClick={() => {
-                    updateRoute('about');
-                }}>
-                    <img alt='Ghost Logo' className='mr-[7px] size-[18px]' src={GhostLogo} />
-                    About Ghost
-                </a>
-                }
+                {/* About Ghost link removed - using custom branding */}
             </nav>
         </div>
     );

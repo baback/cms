@@ -1,10 +1,10 @@
 {
-  "name": "ghost-monorepo",
+  "name": "celmin-cms",
   "version": "0.0.0-private",
-  "description": "The professional publishing platform",
+  "description": "Celmin Magazine Content Management System",
   "private": true,
-  "repository": "https://github.com/TryGhost/Ghost",
-  "author": "Ghost Foundation",
+  "repository": "https://github.com/baback/cms",
+  "author": "Celmin",
   "license": "MIT",
   "workspaces": [
     "ghost/*",
@@ -14,8 +14,8 @@
   "monorepo": {
     "public": false,
     "internalPackages": true,
-    "repo": "https://github.com/TryGhost/Ghost",
-    "scope": "@tryghost"
+    "repo": "https://github.com/baback/cms",
+    "scope": "@celmin"
   },
   "eslintIgnore": [
     "**/node_modules/**"
